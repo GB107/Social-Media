@@ -78,7 +78,7 @@ const handleimage=async(e)=>{
   formData.append("image",file)
   console.log({...formData})
   try{
-    const {data}=await axios.post(`${process.env.NEXT_PUBLIC_API}/uploadimg`,formData)
+    const {data}=await axios.put(`${process.env.NEXT_PUBLIC_API}/uploadimg`,formData)
     setImage({
       url:data.url,
       public_id:data.public_id,
